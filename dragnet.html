@@ -100,11 +100,11 @@
             <p>Writing a program to solve any possible Sudoku riddle can rather easily be done using the <a class="" href="https://en.wikipedia.org/wiki/Constraint_satisfaction_problem">Constraint Satisfaction Problem</a>.
               By adding only a few constraints one can solve even the <a class="" href="https://conceptispuzzles.com/index.aspx?uri=info/article/424">hardest Sudoku</a> in no time. We created two different approaches and let them run against each other.
             </p>
-
+            
             <h4>Domain Adaption</h4>
             <figure>
                 <div style="background-color: #1E1E1E">
-                  <img class="article-image-dragnet" style="height: 230px;" src="images/blogs/dragnet/sudoku-domain.jpg" alt="Code for Sudoku Domain">
+                  <img class="article-image-dragnet" src="images/blogs/dragnet/sudoku-domain.jpg" alt="Code for Sudoku Domain">
                 </div>
                 <figcaption>Codesnippet for Sudoku with Domain Adaption</figcaption>
             </figure>
@@ -113,12 +113,6 @@
             </p>
 
             <h4>Constraint Addition</h4>
-            <figure>
-                <div style="background-color: #1E1E1E">
-                  <img class="article-image-dragnet" style="height: 230px;" src="images/blogs/dragnet/sudoku-constraints.jpg" alt="Code for Sudoku Constraints">
-                </div>
-                <figcaption>Codesnippet for Sudoku with Constraints Addition</figcaption>
-            </figure>
             <p>In contrary to the solution that has been discussed before, in this approach we add another constraint instead of reducing the domain for existing numbers.
             this constraint consists of a lambda function which is added to each predefined variable and limits its assignment to the given number.</p>
             <h4>Comparison</h4>
@@ -145,6 +139,17 @@
             <p>The table above indicates, that the approach with the Domain Adaption is a bit slower than the Constraint Addition.
               Even if the difference is in the range of 0.001 seconds it is clear that such a small change can influence the performance significantly.
             </p>
+            
+            <h4>The Hardest Sudoku</h4>
+            <p>In 2012, Finnish mathematician Arto Inkala claimed to have created the "World's Hardest Sudoku".</p>
+            <figure>
+                <div style="text-align: center">
+                  <img style="float: left; display:inline-block;" class="article-image-dragnet" src="images/blogs/dragnet/hardest_sudoku_before.png" alt="insert image here">
+                  <img style="float: left; display:inline-block;" class="article-image-dragnet" src="images/blogs/dragnet/hardest_sudoku_solved.png" alt="insert image here">
+                </div>
+                <figcaption>Codesnippet for Sudoku with Domain Adaption</figcaption>
+            </figure>
+
             <br>
 
             <h3>Dragnet</h3>
@@ -160,8 +165,7 @@
             <figure>
               <br>
                 <div style="background-color: #1E1E1E">
-                  <img class="article-image-dragnet" src="images/blogs/dragnet/links.jpg" alt="Code for who knows who">
-                </div>
+                <img class="article-image-dragnet" src="images/blogs/dragnet/links.jpg" alt="Code for who knows who">
                 <figcaption>Codesnippet who knows who</figcaption>
             </figure>
             <p>This first part simply describes that if X knows Y, Y also knows X meaning knowing someone is bi-directional.
@@ -171,8 +175,7 @@
             <figure>
               <br>
                 <div style="background-color: #1E1E1E">
-                  <img class="article-image-dragnet" src="images/blogs/dragnet/paths.jpg" alt="Code paths">
-                </div>
+                <img class="article-image-dragnet" src="images/blogs/dragnet/paths.jpg" alt="Code paths">
                 <figcaption>Codesnippet paths</figcaption>
             </figure>
             <p>The term get_all_paths uses recursion to find the path from X to Y.
@@ -184,8 +187,7 @@
             <figure>
               <br>
                 <div style="background-color: #1E1E1E">
-                  <img class="article-image-dragnet" src="images/blogs/dragnet/dated-links.jpg" alt="Code for dated links">
-                </div>
+                <img class="article-image-dragnet" src="images/blogs/dragnet/dated-links.jpg" alt="Code for dated links">
                 <figcaption>Codesnippet for dated links</figcaption>
             </figure>
             <p>Dated links are working quite similar to the has_link therm. The difference here is, that an additional rule is introduced.
@@ -196,7 +198,7 @@
             <figure>
               <br>
                 <div style="background-color: #1E1E1E">
-                  <img class="article-image-dragnet" src="images/blogs/dragnet/dated-paths.jpg" alt="Code for dated paths">
+                <img class="article-image-dragnet" src="images/blogs/dragnet/dated-paths.jpg" alt="Code for dated paths">
                 </div>
                 <figcaption>Codesnippet for dated paths</figcaption>
             </figure>
@@ -252,7 +254,46 @@
                     </tr>
                 </tbody>
             </table>
-            
+            <!--
+
+            <figure>
+                <div class="single-slide">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="article-statistic" src="images/blogs/ai/scores_heuristicai.png" alt="scores heuristic ai">
+                                <figcaption>Distribution of the heuristics score over 200 games</figcaption>
+                            </div>
+                            <div class="col-md-6">
+                                <img class="article-statistic" src="images/blogs/ai/highest_tiles_reached_heuristicai.png" alt="highest reached tiles heuristic ai">
+                                <figcaption>Distribution of the highest reached tiles of the heuristics over 200 games</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+            <figure>
+                <div class="single-slide">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img class="article-image-rect" src="images/blogs/ai/board_bonus_searchai_snakey.jpg" alt="Bonus distribution Snakey">
+                                <figcaption>Bonus distribution Snakey</figcaption>
+                            </div>
+                            <div class="col-md-4">
+                                <img class="article-image-rect" src="images/blogs/ai/board_bonus_searchai_diagonaled.jpg" alt="Bonus distribution Snakey">
+                                <figcaption>Bonus distribution Diagonal</figcaption>
+                            </div>
+                            <div class="col-md-4">
+                                <img class="article-image-rect" src="images/blogs/ai/board_bonus_searchai_squared.jpg" alt="Bonus distribution Snakey">
+                                <figcaption>Bonus distribution Square</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+            -->
+
             <div id="disqus_thread"></div>
             <script>
                 /**
